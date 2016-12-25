@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-   Error 
+ 
+  This is my JSP page. <br>  
 </body>
 </html>

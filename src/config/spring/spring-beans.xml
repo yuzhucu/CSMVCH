@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="userDao" class="com.cssh.common.dao.impl.UserDao">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory" />
+        </property>
+    </bean>
+
+    <!--用户注册业务逻辑类 -->
+    <bean id="userManager" class="com.cssh.common.manager.UserManager">
+        <property name="dao">
+            <ref bean="userDao" />
+        </property>
+    </bean>
+</beans>
